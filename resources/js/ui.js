@@ -6,21 +6,17 @@ $(window).onload = function(){
     $(window).trigger('resize');
 };
 
-var firstRootWinH = 0;
 var rootWinW = 0;
 var rootWinH = 0;
 
 var initHandler = function(){
-    main();
-    gnb();
-    subPage();
+    tabMenu();
     resizeInit();
 	console.log('initHandler');
 }
 
 /* Resize */
 var resizeInit = function(){
-    firstRootWinH = $(window).innerHeight();
     rootWinW = $(window).innerWidth();
     rootWinH = $(window).innerHeight();
 
@@ -36,27 +32,19 @@ var resizeInit = function(){
     }
 }
 
-/* Common */
-var winW = null,
-    winH = null,
-    scrollTop = null;
-
 /* Main */
-var main = function(){
-    if($('.main.home').length){
-        mainVisual();
-        mainScroll();
-        console.log('initMain');
-    }
-}
+// var main = function(){
+//     if($('.main.home').length){
+//         console.log('initMain');
+//     }
+// }
 
 /* Sub Page */
-var subPage = function(){
-    if($('.main.sub').length){
-        tabMenu();
-        console.log('initSub');
-    }
-}
+// var subPage = function(){
+//     if($('.main.sub').length){
+//         console.log('initSub');
+//     }
+// }
 
 /* Main - Scroll */
 var mainScroll = function(){
