@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide</title>
     <link rel="stylesheet" href="resources/css/base.css">
     <link rel="stylesheet" href="resources/css/common.css">
-	<link rel="stylesheet" href="resources/js/vendor/highlight/default.min.css">
-	<link rel="stylesheet" href="resources/js/vendor/highlight/dark.min.css">
-    <!-- <link rel="stylesheet" href="resources/css/contents.css"> -->
     <link rel="stylesheet" href="resources/css/guide.css">
+	<link rel="stylesheet" href="resources/highlight/vs2015.min.css">
 	<script src="resources/js/vendor/jquery-1.10.2.min.js"></script>
 	<script src="resources/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="resources/js/vendor/highlight/highlight.min.js"></script>
 	<script src="resources/js/guide.js"></script>
 	<script src="resources/js/ui.js"></script>
+	<script src="resources/highlight/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
-    <title>Guide</title>
+
 </head>
 <body>
     <div class="g-wrap">
@@ -73,20 +72,87 @@
 						<i class="i-notice"></i>
 					</div>
 
-					<pre>
-						<code class="html">
-							&lt;i class="i-arr-r"&gt;&lt;/i&gt;
-							&lt;i class="i-arr-b"&gt;&lt;/i&gt;
-							&lt;i class="i-select"&gt;&lt;/i&gt;
-							&lt;i class="i-select-img"&gt;&lt;/i&gt;
-							&lt;i class="i-db-arr-l"&gt;&lt;/i&gt;
-							&lt;i class="i-db-arr-r"&gt;&lt;/i&gt;
-							&lt;i class="i-db-arr-r"&gt;&lt;/i&gt;
-							&lt;i class="i-search"&gt;&lt;/i&gt;
-							&lt;i class="i-clip"&gt;&lt;/i&gt;
-							&lt;i class="i-notice"&gt;&lt;/i&gt;
-						</code>
-					</pre>
+					<div class="g-tab">
+						<div class="g-tba-btn">
+							<ul>
+								<li><button><span></span></button></li>
+								<li><button><span></span></button></li>
+								<li><button><span></span></button></li>
+							</ul>
+						</div>
+						<div class="g-tab-cont">
+							<div class="cont-html">
+								<pre>
+									<code class="html">
+										&lt;i class="i-arr-r"&gt;&lt;/i&gt;
+										&lt;i class="i-arr-b"&gt;&lt;/i&gt;
+										&lt;i class="i-select"&gt;&lt;/i&gt;
+										&lt;i class="i-select-img"&gt;&lt;/i&gt;
+										&lt;i class="i-db-arr-l"&gt;&lt;/i&gt;
+										&lt;i class="i-db-arr-r"&gt;&lt;/i&gt;
+										&lt;i class="i-db-arr-r"&gt;&lt;/i&gt;
+										&lt;i class="i-search"&gt;&lt;/i&gt;
+										&lt;i class="i-clip"&gt;&lt;/i&gt;
+										&lt;i class="i-notice"&gt;&lt;/i&gt;
+									</code>
+								</pre>
+							</div>
+							<div class="cont-css">
+								<pre>
+									<code class="css">
+										/* Icon */
+										.i-arr-r {display:block; width:1rem; height:1rem; -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg); border-top:0.1rem solid #326ebd; border-right:0.1rem solid #326ebd;}
+
+										.i-arr-b {display:block; width:1rem; height:1rem; -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg); border-right:0.1rem solid #326ebd; border-bottom:0.1rem solid #326ebd;}
+										.i-select {display:inline-block; width:2rem; height:2rem; background:transparent;}
+										.i-select:before {content:""; display:block; position:absolute; top:65%; left:25%; width:1rem; height:1rem; -webkit-transform:rotate(45deg) translate(-50%, -50%); -ms-transform:rotate(45deg) translate(-50%, -50%); transform:rotate(45deg) translate(-50%, -50%); border-right:0.2rem solid #44516b; border-bottom:0.2rem solid #44516b;}
+
+										.i-select-img {display:block; width:1rem; height:1rem; background:url("../images/common/background/bg_select_arrow.png") no-repeat center / 1.4rem auto;}
+
+										.i-db-arr-l {display:block; width:1.4rem; height:1.4rem;}
+										.i-db-arr-l::before,
+										.i-db-arr-l::after {content:""; display:block; position:absolute; top:0.2rem; width:1rem; height:1rem; -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg); border-left:0.1rem solid #6b7a99; border-bottom:0.1rem solid #6b7a99;}
+										.i-db-arr-l::before {left:0.3rem;} 
+										.i-db-arr-l::after {left:0.8rem;} 
+
+										.i-db-arr-r {display:block; width:1.4rem; height:1.4rem;}
+										.i-db-arr-r::before,
+										.i-db-arr-r::after {content:""; display:block; position:absolute; top:0.2rem; width:1rem; height:1rem; -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg); border-top:0.1rem solid #6b7a99; border-right:0.1rem solid #6b7a99;}
+										.i-db-arr-r::before {right:0.3rem;} 
+										.i-db-arr-r::after {right:0.8rem;}
+
+										.i-search {display:block; width:2rem; height:2rem;}
+										.i-search::before,
+										.i-search::after {content:""; display:block; position:absolute;}
+										.i-search::before {top:0; left:0; width:1.6rem; height:1.6rem; border:0.2rem solid #326ebd; border-radius:50%;}
+										.i-search::after {right:0.1rem; bottom:0.3rem; width:0.9rem; height:0.2rem; background:#326ebd; -webkit-transform:rotate(48deg); -ms-transform:rotate(48deg); transform:rotate(48deg);}
+
+										.i-clip {width:2rem; height:1.8rem; background:url("../images/common/icon/icon_attach.png") no-repeat center / 2rem auto;}
+
+										.i-notice {width:3.9rem; height:1.1rem; background:url("../images/common/icon/icon_notice.gif") no-repeat center / 3.9rem auto;}
+									</code>
+								</pre>
+							</div>
+							<div class="cont-script">
+								<pre>
+									<code class="javascript">
+										var asideMenu = function(){
+											$(document).off('click', '.g-dep01 > li').on('click', '.g-snb li', function(){
+												var $this = $(this);
+												console.log($this);
+												if($this.hasClass('active')){
+													console.log('aaa');
+													$this.removeClass('active');
+												}else{
+													$this.addClass('active');
+												}
+											});
+										}
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
 				</section>
 			</div>
 			<!-- // Icon -->
